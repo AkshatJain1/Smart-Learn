@@ -97,11 +97,14 @@ dummy.ht()
 
 activated = {}
 
+
+
 def isGroup():
     numbers = []
     for turtle in activated:
         numbers.append(activated[turtle])
-    if numbers[0] == numbers[1] * numbers[2] or numbers[1] == numbers[0] * numbers[2] or numbers[2] == numbers[1] * numbers[0]:
+    print(sum(i <= 12 for i in numbers))
+    if sum(i <= 12 for i in numbers) == 2 and (numbers[0] == numbers[1] * numbers[2] or numbers[1] == numbers[0] * numbers[2] or numbers[2] == numbers[1] * numbers[0]):
         return True
     else:
         return False
